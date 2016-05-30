@@ -1,0 +1,15 @@
+#+TITLE: Changelog
+
+* 2.0.0
+
+** Additions
+
+   - Added ~json_valid?~
+
+** Deprecations
+
+   - ~payload_valid?~ is deprecated, and will be removed in =3.0.0=.
+
+** Breaking Changes
+
+   - ~validation_schema~ renamed to ~json_schema~
