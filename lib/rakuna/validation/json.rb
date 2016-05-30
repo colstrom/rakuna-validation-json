@@ -10,8 +10,14 @@ module Rakuna
 
       Contract None => Bool
       def payload_valid?
+        warn 'NOTE: payload_valid? is deprecated; use json_valid? instead.'
+        json_valid?
+      end
+
+      Contract None => Bool
+      def json_valid?
         return true unless defined? json_schema
-        @valid ||= ::JSON::Validator.validate validation_schema, input
+        @valid ||= ::JSON::Validator.validate json_schema, input
       end
     end
   end
